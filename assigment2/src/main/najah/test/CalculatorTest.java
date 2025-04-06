@@ -45,8 +45,7 @@ public class CalculatorTest {
 	@CsvFileSource(resources = "../../../data/calculatorTest/numbersToTestpositiveNumbers.csv",numLinesToSkip = 1)
 	void testAddPositiveNumbers(int num1,int num2,int expected) {
 		assertEquals(expected, calc.add(num1,num2));
-	}//the programs gives an error with the large numbers 
-	//2147483647,1,2147483648 tried this and give me an error 
+	}
 	@ParameterizedTest
 	@DisplayName("Test addition with zero and negative numbers")
 	@Order(2)
@@ -68,7 +67,7 @@ public class CalculatorTest {
 	@CsvFileSource(resources = "../../../data/calculatorTest/numbersToTestDivideMethod.csv",numLinesToSkip = 1)	
 	void testDivide( int num1,int num2,int expected) {
 		assertEquals(expected, calc.divide(num1,num2));
-	}//if the output was double and that is ok the code gives an error and can not support doubles 
+	}
 	
 	@ParameterizedTest
 	@DisplayName("Factorial Parameterized Test")
