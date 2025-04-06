@@ -40,7 +40,7 @@ class RecipeBookTest {
 	void testDeleteRicepe() {
 		recipeBook.addRecipe(recipe1);
 		assertEquals("Tea", recipeBook.deleteRecipe(0));
-//		assertNull(recipeBook.deleteRecipe(0)); it fails  because it returns empty not null 
+
 	}
 	@Test 
 	@DisplayName("Edit a recipe")
@@ -48,7 +48,7 @@ class RecipeBookTest {
 		recipeBook.addRecipe(recipe1);
 		assertEquals("Tea", recipeBook.editRecipe(0, recipe1));
 		assertEquals("", recipeBook.getRecipes()[0].getName());
-//		assertEquals("Tea", recipeBook.getRecipes()[0].getName()); this will fail because the edit returns empty instead of the new name
+
 	}
 	
 	
@@ -58,7 +58,7 @@ class RecipeBookTest {
 	void testAddingDuplicate() {
 		for(int i = 0; i < 4; i++) {
 			  assertTrue(recipeBook.addRecipe(new Recipe()));
-		}//The code stops in the second add because the add method checks for duplicates 
+		}
 	}
 	
 	@Test
@@ -69,7 +69,7 @@ class RecipeBookTest {
 			Recipe recipe=new Recipe();
 			recipe.setName("Recipe"+i);
 			assertTrue(recipeBook.addRecipe(recipe));
-		}//The code stops in the second add because the add method checks for duplicates 
+		}
 		assertFalse(recipeBook.addRecipe(new Recipe()));
 	}
 	
