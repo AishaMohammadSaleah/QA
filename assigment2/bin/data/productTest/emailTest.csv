@@ -1,0 +1,20 @@
+email,expected
+test@example.com,true
+user.name@subdomain.example.co.uk,true
+invalid-email,false
+no-at-symbol.com,false
+space in email@example.com,false
+.leadingdot@example.com,false
+trailingdot.@example.com,false
+multiple..dots@example.com,false
+at..multiple@example.com,false
+@missingusername.com,false
+username@missingdomain,false
+username@.missingtld,false
+username@missingtld.,false
+UPPERCASE@EXAMPLE.COM,true
+mixedCase@ExAmPlE.CoM,true
+special-char!#$%&'*+-/=?^_`{|}~@example.com,true
+user with space @example.com,false
+user@domain with space.com,false
+example@gmail.com,false
